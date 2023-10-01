@@ -36,13 +36,6 @@ EOF  all  create  destroy  help  quit  show  update
 (hbnb) quit
 ```
 
-## Table of Content
-* [Environment](#environment)
-* [Installation](#installation)
-* [File Descriptions](#file-descriptions)
-* [Usage](#usage)
-* [Examples of use](#examples-of-use)
-
 ## Installation:
 * Clone this repository: `git clone "https://github.com/Mike-chege/AirBnB_clone.git"`
 * Access AirBnb directory: `cd AirBnB_clone`
