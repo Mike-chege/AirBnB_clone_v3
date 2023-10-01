@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Amenity object:
-Handles all default RESTFul API actions
+handles REST API actions for Amenity
 """
 from api.v1.views import app_views
 from flask import jsonify
@@ -14,9 +13,7 @@ from models.amenity import Amenity
 
 @app_views.route('/amenities', methods=['GET', 'POST'], strict_slashes=False)
 def amenity():
-    """
-    Handles the class routes
-    """
+    """handles amenities route"""
     if request.method == 'GET':
         return jsonify(
             [obj.to_dict() for obj in storage.all("Amenity").values()])
@@ -37,9 +34,7 @@ def amenity():
     methods=['GET', 'DELETE', 'PUT'],
     strict_slashes=False)
 def amenity_with_id(amenity_id):
-    """
-    Handles all RESTFul API s based on id
-    """
+    """handles amenities route with a parameter amenity_id"""
     amenity = storage.get("Amenity", amenity_id)
     if amenity is None:
         abort(404)
